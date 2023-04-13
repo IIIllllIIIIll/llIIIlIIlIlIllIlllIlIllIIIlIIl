@@ -7517,3 +7517,14 @@ do
     library.notifications = notifications
 end;
 return library, library.utility, library.pointers, library.theme;
+
+local SmallWM = Drawing.new("Text"); do
+    local ScreenSize = workspace.CurrentCamera.ViewportSize.Y
+    SmallWM.Font = 2;
+    SmallWM.Size = 13;
+    SmallWM.Visible = true;
+    SmallWM.Text = "Ethereal";
+    SmallWM.Position = Vector2.new(0, ScreenSize - 15);
+    SmallWM.Color = Color3.fromRGB(1, 164, 135);
+    SmallWM.Outline = true;
+end;
