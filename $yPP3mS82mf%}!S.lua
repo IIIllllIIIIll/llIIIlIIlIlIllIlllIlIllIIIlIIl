@@ -82,17 +82,17 @@ do
         -- Theme Variables
         --local themes = {}
         local theme = {
-            accent = Color3.fromHex("#01A487"),
-            lightcontrast = Color3.fromHex("#1e1e1e"),
-            darkcontrast = Color3.fromHex("#141414"),
+            accent = Color3.fromHex("01A487"),
+            lightcontrast = Color3.fromHex("#171717"),
+            darkcontrast = Color3.fromHex("#0c0c0c"),
             outline = Color3.fromHex("#000000"),
-            inline = Color3.fromHex("#323232"),
+            inline = Color3.fromHex("#2d2d2d"),
             textcolor = Color3.fromRGB(255, 255, 255),
             textdark = Color3.fromRGB(175, 175, 175),
             textborder = Color3.fromRGB(0, 0, 0),
             --cursoroutline = Color3.fromRGB(10, 10, 10),
-            font = Drawing.Fonts.Monospace,
-            textsize = 15
+            font = Drawing.Fonts.Plex;
+            textsize = 13
         }
         -- // utility Functions
         do
@@ -1136,14 +1136,14 @@ do
                     }
                     --
                     local esppreview_title = utility:Create("TextLabel", {Vector2.new(4,2), esppreview_inner}, {
-                        Text = "ESP Preview",
+                        Text = "Render preview",
                         Size = theme.textsize,
                         Font = theme.font,
                         Color = theme.textcolor,
                         OutlineColor = theme.textborder,
                         Position = utility:Position(0, 4, 0, 2, esppreview_inner)
                     }, window.VisualPreview.Drawings)
-                    --
+                    --[[
                     local esppreview_visiblebutton = utility:Create("TextLabel", {Vector2.new(esppreview_inner.Size.X - (5 + 7),2), esppreview_inner}, {
                         Text = "O",
                         Size = theme.textsize,
@@ -1152,7 +1152,7 @@ do
                         OutlineColor = theme.textborder,
                         Position = utility:Position(1, -(5 + 7), 0, 2, esppreview_inner)
                     }, window.VisualPreview.Drawings)
-                    --
+                    --]]
                     library.colors[esppreview_title] = {
                         OutlineColor = "textborder",
                         Color = "textcolor"
@@ -7521,9 +7521,9 @@ local SmallWM = Drawing.new("Text"); do
     SmallWM.Font = 2;
     SmallWM.Size = 13;
     SmallWM.Visible = true;
-    SmallWM.Text = "Ethereal";
-    SmallWM.Position = Vector2.new(0, ScreenSize - 15);
-    SmallWM.Color = Color3.fromRGB(1, 164, 135);
     SmallWM.Outline = true;
+    SmallWM.Text = "Ethereal";
+    SmallWM.Color = Color3.fromRGB(1, 164, 135);
+    SmallWM.Position = Vector2.new(0, ScreenSize - 14);
 end
 return library, library.utility, library.pointers, library.theme;
